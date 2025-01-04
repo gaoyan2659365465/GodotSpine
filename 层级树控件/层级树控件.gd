@@ -9,6 +9,7 @@ func _ready():
 	Global.选择管理器.更改选中.connect(_on_更改选中)
 	Global.添加节点.connect(_on_添加节点)
 	Global.重命名节点.connect(_on_重命名节点)
+	Global.删除节点.connect(_on_删除节点)
 	item_activated.connect(_on_item_activated)
 
 
@@ -149,6 +150,12 @@ func _gui_input(event: InputEvent) -> void:
 				if item:
 					item.set_collapsed_recursive(not item.collapsed)# 右键展开
 
+func _input(event: InputEvent) -> void:
+	if event is InputEventKey:
+		if event.keycode == KEY_DELETE:
+			if event.pressed:
+				Global.绘制控件.绘制删除弹窗()
+
 
 func _on_更改选中():
 	# 鼠标在视口中点击选择图片，树列表中也应该同时被选中
@@ -168,3 +175,8 @@ func _on_重命名节点(node:Node2D):
 func _on_item_activated():
 	# 双击触发重命名
 	Global.绘制控件.绘制弹窗()
+
+func _on_删除节点(node:Node2D):
+	var item:TreeItem = 根据节点获取单元格(node)
+	var parent = item.get_parent()
+	parent.remove_child(item)

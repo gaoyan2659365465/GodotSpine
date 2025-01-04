@@ -42,6 +42,11 @@ func 绘制弹窗():
 	var 弹窗 = preload("res://弹窗/弹窗.gd").new()
 	add_child(弹窗)
 
+func 绘制删除弹窗():
+	var 删除弹窗 = preload("res://弹窗/删除弹窗.gd").new()
+	add_child(删除弹窗)
+	print("9")
+
 
 func _process(delta: float) -> void:
 	queue_redraw()

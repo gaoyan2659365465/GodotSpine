@@ -28,3 +28,5 @@ var 工具模式:
 signal 添加节点(node)
 
 signal 重命名节点(node)
+
+signal 删除节点(node)
