@@ -1,11 +1,13 @@
 extends Button
 
 signal 点击按钮(target,toggled_on:bool)
+signal 点击按钮2(target)
 
 
 func _ready() -> void:
 	初始化()
 	toggled.connect(_on_button_toggled)
+	pressed.connect(_on_button_pressed)
 
 func 初始化():
 	text = "旋转"
@@ -80,4 +82,6 @@ func 选中(value):
 func _on_button_toggled(toggled_on: bool) -> void:
 	# 按钮切换
 	点击按钮.emit(self,toggled_on)
-	
+
+func _on_button_pressed():
+	点击按钮2.emit(self)

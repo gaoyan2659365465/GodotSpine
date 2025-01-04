@@ -38,6 +38,11 @@ func 绘制缩放控件(pos:Vector2):
 func 绘制骨骼(node):
 	绘制数据.append(["骨骼",node])
 
+func 绘制弹窗():
+	var 弹窗 = preload("res://弹窗/弹窗.gd").new()
+	add_child(弹窗)
+
+
 func _process(delta: float) -> void:
 	queue_redraw()
 

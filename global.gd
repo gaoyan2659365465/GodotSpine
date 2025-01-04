@@ -26,3 +26,5 @@ var 工具模式:
 		设置工具模式.emit(v)
 
 signal 添加节点(node)
+
+signal 重命名节点(node)

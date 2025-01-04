@@ -8,6 +8,8 @@ func _ready():
 	await get_tree().process_frame
 	Global.选择管理器.更改选中.connect(_on_更改选中)
 	Global.添加节点.connect(_on_添加节点)
+	Global.重命名节点.connect(_on_重命名节点)
+	item_activated.connect(_on_item_activated)
 
 
 func 添加节点(node:Node,parent:TreeItem):
@@ -158,3 +160,11 @@ func _on_添加节点(node:Node2D):
 	var 父节点 = node.get_parent()
 	var parent = 根据节点获取单元格(父节点)
 	添加节点(node,parent)
+
+func _on_重命名节点(node:Node2D):
+	var parent:TreeItem = 根据节点获取单元格(node)
+	parent.set_text(0,node.name)
+
+func _on_item_activated():
+	# 双击触发重命名
+	Global.绘制控件.绘制弹窗()
