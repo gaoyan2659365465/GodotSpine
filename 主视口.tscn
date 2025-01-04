@@ -1,0 +1,137 @@
+[gd_scene load_steps=12 format=3 uid="uid://bunx10w7fj5hs"]
+
+[ext_resource type="Script" path="res://主视口.gd" id="1_20ml3"]
+[ext_resource type="Script" path="res://绘制控件.gd" id="3_l4pvb"]
+[ext_resource type="Script" path="res://层级树控件/层级树子面板.gd" id="5_3brmj"]
+[ext_resource type="Script" path="res://层级树控件/层级树控件.gd" id="5_gstqn"]
+[ext_resource type="Texture2D" uid="uid://durm6d3tto3fu" path="res://icon.svg" id="6_b0alh"]
+[ext_resource type="Script" path="res://层级树控件/层级树面板.gd" id="6_e5836"]
+[ext_resource type="Texture2D" uid="uid://ds040l70gugaw" path="res://资源/猫.png" id="7_bnxc3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4c3ge"]
+bg_color = Color(0.345098, 0.345098, 0.345098, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.427451, 0.427451, 0.427451, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n1irg"]
+bg_color = Color(0.345098, 0.345098, 0.345098, 0)
+border_color = Color(0.427451, 0.427451, 0.427451, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s2lc0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pmexl"]
+
+[node name="主视口" type="Node2D"]
+script = ExtResource("1_20ml3")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="SplitContainer" type="SplitContainer" parent="CanvasLayer"]
+z_index = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+split_offset = 800
+
+[node name="绘制控件" type="Control" parent="CanvasLayer/SplitContainer"]
+layout_mode = 2
+mouse_filter = 1
+script = ExtResource("3_l4pvb")
+
+[node name="背景色" type="ColorRect" parent="CanvasLayer/SplitContainer"]
+layout_mode = 2
+color = Color(0.176471, 0.176471, 0.176471, 1)
+
+[node name="Panel" type="Panel" parent="CanvasLayer/SplitContainer/背景色"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 10.0
+offset_top = -297.0
+offset_right = -11.0
+offset_bottom = 271.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4c3ge")
+script = ExtResource("6_e5836")
+
+[node name="Control" type="Control" parent="CanvasLayer/SplitContainer/背景色/Panel"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 23.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("5_3brmj")
+
+[node name="Tree" type="Tree" parent="CanvasLayer/SplitContainer/背景色/Panel/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 46.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+mouse_filter = 1
+theme_override_colors/guide_color = Color(0, 0, 0, 0)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/v_separation = 2
+theme_override_constants/h_separation = 1
+theme_override_font_sizes/font_size = 13
+theme_override_styles/panel = SubResource("StyleBoxFlat_n1irg")
+theme_override_styles/selected = SubResource("StyleBoxEmpty_s2lc0")
+theme_override_styles/cursor_unfocused = SubResource("StyleBoxEmpty_pmexl")
+hide_root = true
+select_mode = 2
+script = ExtResource("5_gstqn")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Skeleton2D" type="Skeleton2D" parent="Node2D"]
+
+[node name="root" type="Bone2D" parent="Node2D/Skeleton2D"]
+rest = Transform2D(1, 0, 0, 1, 0, 0)
+
+[node name="Bone2D" type="Bone2D" parent="Node2D/Skeleton2D/root"]
+position = Vector2(57, 53)
+rest = Transform2D(1, 0, 0, 1, 57, 53)
+
+[node name="Bone2D" type="Bone2D" parent="Node2D/Skeleton2D/root/Bone2D"]
+position = Vector2(70, -108)
+rest = Transform2D(1, 0, 0, 1, 70, -108)
+
+[node name="Bone2D" type="Bone2D" parent="Node2D/Skeleton2D/root/Bone2D/Bone2D"]
+position = Vector2(29, 125)
+rest = Transform2D(1, 0, 0, 1, 29, 125)
+auto_calculate_length_and_angle = false
+length = 93.837
+bone_angle = -46.957
+
+[node name="Icon" type="Node2D" parent="Node2D/Skeleton2D/root"]
+
+[node name="Icon" type="Sprite2D" parent="Node2D/Skeleton2D/root/Icon"]
+position = Vector2(83, 167)
+texture = ExtResource("6_b0alh")
+
+[node name="猫" type="Node2D" parent="Node2D/Skeleton2D/root"]
+position = Vector2(206, -264)
+
+[node name="猫" type="Sprite2D" parent="Node2D/Skeleton2D/root/猫"]
+position = Vector2(594, 66)
+texture = ExtResource("7_bnxc3")
