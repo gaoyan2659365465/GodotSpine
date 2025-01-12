@@ -1,0 +1,114 @@
+[gd_scene load_steps=3 format=3 uid="uid://bnk1qnah12cfj"]
+
+[ext_resource type="Texture2D" uid="uid://durm6d3tto3fu" path="res://icon.svg" id="1_tsji4"]
+[ext_resource type="Texture2D" uid="uid://ds040l70gugaw" path="res://资源/猫.png" id="2_ybv4h"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Skeleton2D" type="Skeleton2D" parent="."]
+
+[node name="root" type="Bone2D" parent="Skeleton2D"]
+rest = Transform2D(1, 0, 0, 1, 0, 0)
+
+[node name="Bone2D" type="Bone2D" parent="Skeleton2D/root"]
+position = Vector2(57, 53)
+rest = Transform2D(1, 0, 0, 1, 57, 53)
+
+[node name="Bone2D" type="Bone2D" parent="Skeleton2D/root/Bone2D"]
+position = Vector2(70, -108)
+rest = Transform2D(1, 0, 0, 1, 70, -108)
+
+[node name="Bone2D" type="Bone2D" parent="Skeleton2D/root/Bone2D/Bone2D"]
+position = Vector2(29, 125)
+rest = Transform2D(1, 0, 0, 1, 29, 125)
+auto_calculate_length_and_angle = false
+length = 93.837
+bone_angle = -46.957
+
+[node name="Icon" type="Node2D" parent="Skeleton2D/root"]
+
+[node name="Icon" type="Sprite2D" parent="Skeleton2D/root/Icon"]
+position = Vector2(83, 167)
+texture = ExtResource("1_tsji4")
+
+[node name="猫" type="Node2D" parent="Skeleton2D/root"]
+position = Vector2(206, -264)
+
+[node name="猫" type="Sprite2D" parent="Skeleton2D/root/猫"]
+position = Vector2(594, 66)
+texture = ExtResource("2_ybv4h")
+
+[node name="Bone2D2" type="Bone2D" parent="Skeleton2D/root"]
+position = Vector2(57, 53)
+rest = Transform2D(1, 0, 0, 1, 57, 53)
+
+[node name="Bone2D" type="Bone2D" parent="Skeleton2D/root/Bone2D2"]
+position = Vector2(70, -108)
+rest = Transform2D(1, 0, 0, 1, 70, -108)
+
+[node name="Bone2D" type="Bone2D" parent="Skeleton2D/root/Bone2D2/Bone2D"]
+position = Vector2(29, 125)
+rest = Transform2D(1, 0, 0, 1, 29, 125)
+auto_calculate_length_and_angle = false
+length = 93.837
+bone_angle = -46.957
+
+[node name="Bone2D2" type="Bone2D" parent="Skeleton2D/root/Bone2D2"]
+position = Vector2(57, 53)
+rest = Transform2D(1, 0, 0, 1, 57, 53)
+
+[node name="Bone2D" type="Bone2D" parent="Skeleton2D/root/Bone2D2/Bone2D2"]
+position = Vector2(70, -108)
+rest = Transform2D(1, 0, 0, 1, 70, -108)
+
+[node name="Bone2D" type="Bone2D" parent="Skeleton2D/root/Bone2D2/Bone2D2/Bone2D"]
+position = Vector2(29, 125)
+rest = Transform2D(1, 0, 0, 1, 29, 125)
+auto_calculate_length_and_angle = false
+length = 93.837
+bone_angle = -46.957
+
+[node name="Bone2D2" type="Bone2D" parent="Skeleton2D/root/Bone2D2/Bone2D2"]
+position = Vector2(57, 53)
+rest = Transform2D(1, 0, 0, 1, 57, 53)
+
+[node name="Bone2D" type="Bone2D" parent="Skeleton2D/root/Bone2D2/Bone2D2/Bone2D2"]
+position = Vector2(70, -108)
+rest = Transform2D(1, 0, 0, 1, 70, -108)
+
+[node name="Bone2D" type="Bone2D" parent="Skeleton2D/root/Bone2D2/Bone2D2/Bone2D2/Bone2D"]
+position = Vector2(29, 125)
+rest = Transform2D(1, 0, 0, 1, 29, 125)
+auto_calculate_length_and_angle = false
+length = 93.837
+bone_angle = -46.957
+
+[node name="Bone2D2" type="Bone2D" parent="Skeleton2D/root/Bone2D2/Bone2D2/Bone2D2"]
+position = Vector2(57, 53)
+rest = Transform2D(1, 0, 0, 1, 57, 53)
+
+[node name="Bone2D" type="Bone2D" parent="Skeleton2D/root/Bone2D2/Bone2D2/Bone2D2/Bone2D2"]
+position = Vector2(70, -108)
+rest = Transform2D(1, 0, 0, 1, 70, -108)
+
+[node name="Bone2D" type="Bone2D" parent="Skeleton2D/root/Bone2D2/Bone2D2/Bone2D2/Bone2D2/Bone2D"]
+position = Vector2(29, 125)
+rest = Transform2D(1, 0, 0, 1, 29, 125)
+auto_calculate_length_and_angle = false
+length = 93.837
+bone_angle = -46.957
+
+[node name="Bone2D2" type="Bone2D" parent="Skeleton2D/root/Bone2D2/Bone2D2/Bone2D2/Bone2D2"]
+position = Vector2(57, 53)
+rest = Transform2D(1, 0, 0, 1, 57, 53)
+
+[node name="Bone2D" type="Bone2D" parent="Skeleton2D/root/Bone2D2/Bone2D2/Bone2D2/Bone2D2/Bone2D2"]
+position = Vector2(70, -108)
+rest = Transform2D(1, 0, 0, 1, 70, -108)
+
+[node name="Bone2D" type="Bone2D" parent="Skeleton2D/root/Bone2D2/Bone2D2/Bone2D2/Bone2D2/Bone2D2/Bone2D"]
+position = Vector2(29, 125)
+rest = Transform2D(1, 0, 0, 1, 29, 125)
+auto_calculate_length_and_angle = false
+length = 93.837
+bone_angle = -46.957

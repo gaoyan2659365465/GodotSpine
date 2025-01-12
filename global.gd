@@ -2,7 +2,7 @@ extends Node
 
 
 var 绘制控件
-var 选择管理器
+var 选择管理器:选择管理器类
 var 根节点#里面存放骨架和网格
 var 主相机
 

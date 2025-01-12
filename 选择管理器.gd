@@ -1,4 +1,4 @@
-extends Node
+class_name 选择管理器类 extends Node
 
 """
 图片的选中状态、悬浮状态

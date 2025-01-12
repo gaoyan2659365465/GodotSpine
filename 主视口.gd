@@ -55,6 +55,14 @@ func _ready() -> void:
 func _on_缩放条控件_设置缩放(value):
 	Global.主相机.设置缩放(value)
 
+func _input(event: InputEvent) -> void:
+	if event is InputEventKey:
+		if event.keycode == KEY_SPACE:
+			Global.选择管理器.设置选中列表([])
+		if event.keycode == KEY_DELETE:
+			if event.pressed:
+				Global.绘制控件.绘制删除弹窗()
+
 
 
 func _draw() -> void:

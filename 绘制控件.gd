@@ -45,7 +45,6 @@ func 绘制弹窗():
 func 绘制删除弹窗():
 	var 删除弹窗 = preload("res://弹窗/删除弹窗.gd").new()
 	add_child(删除弹窗)
-	print("9")
 
 
 func _process(delta: float) -> void:
@@ -255,21 +254,22 @@ func _draw() -> void:
 			draw_set_transform(Vector2.ZERO)
 		elif data[0] == "骨骼":
 			var node:Bone2D = data[1]
-			var 颜色 = node.颜色
-			var tran = node.get_canvas_transform()
-			draw_set_transform_matrix(tran)
-			var 骨骼坐标 = node.global_position
-			draw_circle(骨骼坐标,3,颜色,false,1,true)
-			draw_set_transform_matrix(node.get_global_transform_with_canvas())
-			var 终点 = Vector2(node.get_length(),0).rotated(node.get_bone_angle())
-			var 半径 = clamp(remap(终点.length(),0,500,2,3),2,3)
-			var 起点 = Vector2(半径+3,0).rotated(终点.angle())
-			var 右点 = Vector2(半径*2+3,半径).rotated(终点.angle())
-			var 左点 = Vector2(半径*2+3,-半径).rotated(终点.angle())
-			var pos:PackedVector2Array = [起点,左点,终点,右点,起点]
-			if 终点!=Vector2.ZERO:
-				draw_colored_polygon(pos,颜色,pos)
-				draw_polyline(pos,颜色,3,true)
-			draw_set_transform(Vector2.ZERO)
+			if node.visible:# 骨骼显示与否
+				var 颜色 = node.颜色
+				var tran = node.get_canvas_transform()
+				draw_set_transform_matrix(tran)
+				var 骨骼坐标 = node.global_position
+				draw_circle(骨骼坐标,3,颜色,false,1,true)
+				draw_set_transform_matrix(node.get_global_transform_with_canvas())
+				var 终点 = Vector2(node.get_length(),0).rotated(node.get_bone_angle())
+				var 半径 = clamp(remap(终点.length(),0,500,2,3),2,3)
+				var 起点 = Vector2(半径+3,0).rotated(终点.angle())
+				var 右点 = Vector2(半径*2+3,半径).rotated(终点.angle())
+				var 左点 = Vector2(半径*2+3,-半径).rotated(终点.angle())
+				var pos:PackedVector2Array = [起点,左点,终点,右点,起点]
+				if 终点!=Vector2.ZERO:
+					draw_colored_polygon(pos,颜色,pos)
+					draw_polyline(pos,颜色,3,true)
+				draw_set_transform(Vector2.ZERO)
 
 	绘制数据.clear()

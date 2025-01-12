@@ -1,12 +1,23 @@
-[gd_scene load_steps=12 format=3 uid="uid://bunx10w7fj5hs"]
+[gd_scene load_steps=13 format=3 uid="uid://bunx10w7fj5hs"]
 
 [ext_resource type="Script" path="res://主视口.gd" id="1_20ml3"]
+[ext_resource type="Script" path="res://层级树控件/层级树.gd" id="3_46ykk"]
 [ext_resource type="Script" path="res://绘制控件.gd" id="3_l4pvb"]
-[ext_resource type="Script" path="res://层级树控件/层级树子面板.gd" id="5_3brmj"]
-[ext_resource type="Script" path="res://层级树控件/层级树控件.gd" id="5_gstqn"]
-[ext_resource type="Texture2D" uid="uid://durm6d3tto3fu" path="res://icon.svg" id="6_b0alh"]
-[ext_resource type="Script" path="res://层级树控件/层级树面板.gd" id="6_e5836"]
-[ext_resource type="Texture2D" uid="uid://ds040l70gugaw" path="res://资源/猫.png" id="7_bnxc3"]
+[ext_resource type="Script" path="res://详细面板控件/详细面板控件.gd" id="6_a45gf"]
+[ext_resource type="Texture2D" uid="uid://d11e8o4po805" path="res://屏幕截图 2025-01-05 091540.png" id="7_6le7h"]
+[ext_resource type="Texture2D" uid="uid://ds835b4opl2gk" path="res://资源/复制.svg" id="7_58xjj"]
+[ext_resource type="Texture2D" uid="uid://lra1gv0spx0y" path="res://资源/重命名.svg" id="8_116oy"]
+[ext_resource type="Texture2D" uid="uid://brxlhn34yhwwr" path="res://资源/关闭.svg" id="9_qlr36"]
+[ext_resource type="PackedScene" uid="uid://bnk1qnah12cfj" path="res://node_2d.tscn" id="12_cvt10"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cggou"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q3vrv"]
+bg_color = Color(0.4, 0.4, 0.4, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4c3ge"]
 bg_color = Color(0.345098, 0.345098, 0.345098, 1)
@@ -19,14 +30,6 @@ corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n1irg"]
-bg_color = Color(0.345098, 0.345098, 0.345098, 0)
-border_color = Color(0.427451, 0.427451, 0.427451, 1)
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s2lc0"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pmexl"]
 
 [node name="主视口" type="Node2D"]
 script = ExtResource("1_20ml3")
@@ -41,7 +44,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-split_offset = 800
+split_offset = 842
 
 [node name="绘制控件" type="Control" parent="CanvasLayer/SplitContainer"]
 layout_mode = 2
@@ -52,86 +55,87 @@ script = ExtResource("3_l4pvb")
 layout_mode = 2
 color = Color(0.176471, 0.176471, 0.176471, 1)
 
-[node name="Panel" type="Panel" parent="CanvasLayer/SplitContainer/背景色"]
-layout_mode = 1
-anchors_preset = 14
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = 10.0
-offset_top = -297.0
-offset_right = -11.0
-offset_bottom = 271.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_4c3ge")
-script = ExtResource("6_e5836")
-
-[node name="Control" type="Control" parent="CanvasLayer/SplitContainer/背景色/Panel"]
-clip_contents = true
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/SplitContainer/背景色"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 23.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("5_3brmj")
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
 
-[node name="Tree" type="Tree" parent="CanvasLayer/SplitContainer/背景色/Panel/Control"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/SplitContainer/背景色/MarginContainer"]
+layout_mode = 2
+
+[node name="层级树" type="Control" parent="CanvasLayer/SplitContainer/背景色/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+script = ExtResource("3_46ykk")
+
+[node name="详细面板控件" type="Control" parent="CanvasLayer/SplitContainer/背景色/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+size_flags_vertical = 0
+script = ExtResource("6_a45gf")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/SplitContainer/背景色/MarginContainer/VBoxContainer/详细面板控件"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 46.0
-offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/SplitContainer/背景色/MarginContainer/VBoxContainer/详细面板控件/VBoxContainer"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+alignment = 2
+
+[node name="Button" type="Button" parent="CanvasLayer/SplitContainer/背景色/MarginContainer/VBoxContainer/详细面板控件/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(28, 0)
+layout_mode = 2
 focus_mode = 0
-mouse_filter = 1
-theme_override_colors/guide_color = Color(0, 0, 0, 0)
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_constants/v_separation = 2
-theme_override_constants/h_separation = 1
-theme_override_font_sizes/font_size = 13
-theme_override_styles/panel = SubResource("StyleBoxFlat_n1irg")
-theme_override_styles/selected = SubResource("StyleBoxEmpty_s2lc0")
-theme_override_styles/cursor_unfocused = SubResource("StyleBoxEmpty_pmexl")
-hide_root = true
-select_mode = 2
-script = ExtResource("5_gstqn")
+theme_override_constants/icon_max_width = 15
+theme_override_styles/focus = SubResource("StyleBoxEmpty_cggou")
+theme_override_styles/normal = SubResource("StyleBoxFlat_q3vrv")
+icon = ExtResource("7_58xjj")
+icon_alignment = 1
+expand_icon = true
 
-[node name="Node2D" type="Node2D" parent="."]
+[node name="Button2" type="Button" parent="CanvasLayer/SplitContainer/背景色/MarginContainer/VBoxContainer/详细面板控件/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(28, 0)
+layout_mode = 2
+focus_mode = 0
+theme_override_constants/icon_max_width = 19
+theme_override_styles/focus = SubResource("StyleBoxEmpty_cggou")
+theme_override_styles/normal = SubResource("StyleBoxFlat_q3vrv")
+icon = ExtResource("8_116oy")
+icon_alignment = 1
+expand_icon = true
 
-[node name="Skeleton2D" type="Skeleton2D" parent="Node2D"]
+[node name="Button3" type="Button" parent="CanvasLayer/SplitContainer/背景色/MarginContainer/VBoxContainer/详细面板控件/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(28, 0)
+layout_mode = 2
+focus_mode = 0
+theme_override_constants/icon_max_width = 24
+theme_override_styles/focus = SubResource("StyleBoxEmpty_cggou")
+theme_override_styles/normal = SubResource("StyleBoxFlat_q3vrv")
+icon = ExtResource("9_qlr36")
+icon_alignment = 1
+expand_icon = true
 
-[node name="root" type="Bone2D" parent="Node2D/Skeleton2D"]
-rest = Transform2D(1, 0, 0, 1, 0, 0)
+[node name="Panel" type="Panel" parent="CanvasLayer/SplitContainer/背景色/MarginContainer/VBoxContainer/详细面板控件/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4c3ge")
 
-[node name="Bone2D" type="Bone2D" parent="Node2D/Skeleton2D/root"]
-position = Vector2(57, 53)
-rest = Transform2D(1, 0, 0, 1, 57, 53)
+[node name="屏幕截图2025-01-05091540" type="Sprite2D" parent="CanvasLayer/SplitContainer/背景色/MarginContainer/VBoxContainer"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.203922)
+position = Vector2(127, 663)
+texture = ExtResource("7_6le7h")
 
-[node name="Bone2D" type="Bone2D" parent="Node2D/Skeleton2D/root/Bone2D"]
-position = Vector2(70, -108)
-rest = Transform2D(1, 0, 0, 1, 70, -108)
-
-[node name="Bone2D" type="Bone2D" parent="Node2D/Skeleton2D/root/Bone2D/Bone2D"]
-position = Vector2(29, 125)
-rest = Transform2D(1, 0, 0, 1, 29, 125)
-auto_calculate_length_and_angle = false
-length = 93.837
-bone_angle = -46.957
-
-[node name="Icon" type="Node2D" parent="Node2D/Skeleton2D/root"]
-
-[node name="Icon" type="Sprite2D" parent="Node2D/Skeleton2D/root/Icon"]
-position = Vector2(83, 167)
-texture = ExtResource("6_b0alh")
-
-[node name="猫" type="Node2D" parent="Node2D/Skeleton2D/root"]
-position = Vector2(206, -264)
-
-[node name="猫" type="Sprite2D" parent="Node2D/Skeleton2D/root/猫"]
-position = Vector2(594, 66)
-texture = ExtResource("7_bnxc3")
+[node name="Node2D" parent="." instance=ExtResource("12_cvt10")]
