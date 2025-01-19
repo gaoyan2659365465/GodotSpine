@@ -1,5 +1,5 @@
 @tool
-extends Control
+extends VBoxContainer
 
 var 标题字 = ""
 
@@ -18,11 +18,8 @@ func _ready() -> void:
 
 
 func 创建子项():
-	vbox = VBoxContainer.new()
-	add_child(vbox)
-	vbox.size = size
 	var hbox = HBoxContainer.new()
-	vbox.add_child(hbox)
+	add_child(hbox)
 	hbox.custom_minimum_size = Vector2(0,25)
 	hbox.alignment = BoxContainer.ALIGNMENT_END
 	
@@ -87,12 +84,21 @@ func 创建子项():
 	hbox.add_child(bt3)
 	bt3.pressed.connect(_on_bt3_pressed)
 	
-	var p = preload("res://详细面板控件/详细面板子项.gd").new()
-	vbox.add_child(p)
+	if Global.选择管理器.选中列表.size() >=1:
+		var 选中 = Global.选择管理器.选中列表[0]
+		if 选中 as Bone2D:
+			var p = preload("res://详细面板控件/骨骼详细面板.gd").new()
+			add_child(p)
+		elif 选中 as Sprite2D:
+			var p = preload("res://详细面板控件/区域详细面板.gd").new()
+			add_child(p)
+		elif 选中 as Node2D:
+			var p = preload("res://详细面板控件/插槽详细面板.gd").new()
+			add_child(p)
 
 
 func _on_resized():
-	vbox.size = size
+	pass
 	
 
 func _on_更改选中():

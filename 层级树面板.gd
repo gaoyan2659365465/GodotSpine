@@ -14,7 +14,6 @@ func 创建详细面板子控件():
 		详细面板.queue_free()
 	详细面板 = preload("res://详细面板控件/详细面板控件.gd").new()
 	add_child(详细面板)
-	详细面板.custom_minimum_size = Vector2(0,150)
 	详细面板.size_flags_vertical = Control.SIZE_SHRINK_CENTER
 	
 
