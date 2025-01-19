@@ -3,7 +3,7 @@ extends Bone2D
 var 颜色 = Color(0.668, 0.668, 0.668)
 
 func _ready() -> void:
-	pass
+	self_modulate = Color(0.668, 0.668, 0.668)
 
 
 func _process(delta: float) -> void:
@@ -37,7 +37,7 @@ func _input(event: InputEvent) -> void:
 			颜色 = Color(1, 1, 1)
 			Global.选择管理器.预选中目标(self)
 		else:
-			颜色 = Color(0.668, 0.668, 0.668)
+			颜色 = self_modulate
 			if Global.选择管理器.预选中 == self:
 				Global.选择管理器.预选中目标(null)
 	# 让选中的骨骼保持蓝色

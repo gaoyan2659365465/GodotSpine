@@ -2,7 +2,7 @@ extends Control
 
 var 背景
 var 子面板
-var tree
+var tree:Tree
 
 var 悬浮子项 = null
 var 进入眼睛区域 = false
@@ -18,6 +18,7 @@ func _ready() -> void:
 	Global.添加节点.connect(_on_添加节点)
 	Global.重命名节点.connect(_on_重命名节点)
 	Global.删除节点.connect(_on_删除节点)
+	Global.复制节点.connect(_on_复制节点)
 	递归所有节点(Global.根节点,tree.create_item())
 	
 	resized.connect(_on_resized)
@@ -104,6 +105,7 @@ func 添加节点(node:Node,parent:TreeItem):
 	node.set_process_input(true)
 	node.set_process(true)
 
+
 func 递归所有节点(target:Node,parent:TreeItem):
 	for i in target.get_children():
 		var new_parent
@@ -157,6 +159,7 @@ func 递归所有单元格(parent:TreeItem,items:Array):
 	return items
 
 func 选择单元格(node):
+	tree.deselect_all()
 	var items = 递归所有单元格(tree.get_root(),[])
 	for i in items:
 		if i.get_meta("node") == node:
@@ -202,6 +205,9 @@ func _on_更改选中():
 	# 鼠标在视口中点击选择图片，树列表中也应该同时被选中
 	if Global.选择管理器.选中列表.size() == 1:
 		选择单元格(Global.选择管理器.选中列表[0])
+	elif Global.选择管理器.选中列表.size() == 0:
+		选择单元格(null)
+	queue_redraw()
 
 func _on_添加节点(node:Node2D):
 	var 父节点 = node.get_parent()
@@ -216,6 +222,11 @@ func _on_删除节点(node:Node2D):
 	var item:TreeItem = 根据节点获取单元格(node)
 	var parent = item.get_parent()
 	parent.remove_child(item)
+
+func _on_复制节点(old_node:Node2D,new_node:Node2D):
+	tree.clear()
+	递归所有节点(Global.根节点,tree.create_item())
+	queue_redraw()
 
 
 func _on_子面板_mouse_exited():

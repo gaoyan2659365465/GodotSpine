@@ -8,7 +8,8 @@ func _ready() -> void:
 	material.set("shader_parameter/OUTLINE_COLOR",Color(1, 1, 1, 0))
 	material.resource_local_to_scene = true
 	
-	Global.选择管理器.更改预选中.connect(_on_更改预选中)
+	if not Global.选择管理器.更改预选中.is_connected(_on_更改预选中):
+		Global.选择管理器.更改预选中.connect(_on_更改预选中)
 
 
 func 显示边缘():

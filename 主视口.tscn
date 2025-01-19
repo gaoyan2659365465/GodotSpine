@@ -1,35 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://bunx10w7fj5hs"]
+[gd_scene load_steps=7 format=3 uid="uid://bunx10w7fj5hs"]
 
 [ext_resource type="Script" path="res://主视口.gd" id="1_20ml3"]
 [ext_resource type="Script" path="res://层级树控件/层级树.gd" id="3_46ykk"]
 [ext_resource type="Script" path="res://绘制控件.gd" id="3_l4pvb"]
-[ext_resource type="Script" path="res://详细面板控件/详细面板控件.gd" id="6_a45gf"]
+[ext_resource type="Script" path="res://层级树面板.gd" id="3_lb4v7"]
 [ext_resource type="Texture2D" uid="uid://d11e8o4po805" path="res://屏幕截图 2025-01-05 091540.png" id="7_6le7h"]
-[ext_resource type="Texture2D" uid="uid://ds835b4opl2gk" path="res://资源/复制.svg" id="7_58xjj"]
-[ext_resource type="Texture2D" uid="uid://lra1gv0spx0y" path="res://资源/重命名.svg" id="8_116oy"]
-[ext_resource type="Texture2D" uid="uid://brxlhn34yhwwr" path="res://资源/关闭.svg" id="9_qlr36"]
 [ext_resource type="PackedScene" uid="uid://bnk1qnah12cfj" path="res://node_2d.tscn" id="12_cvt10"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cggou"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q3vrv"]
-bg_color = Color(0.4, 0.4, 0.4, 1)
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4c3ge"]
-bg_color = Color(0.345098, 0.345098, 0.345098, 1)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color(0.427451, 0.427451, 0.427451, 1)
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
 
 [node name="主视口" type="Node2D"]
 script = ExtResource("1_20ml3")
@@ -52,6 +28,7 @@ mouse_filter = 1
 script = ExtResource("3_l4pvb")
 
 [node name="背景色" type="ColorRect" parent="CanvasLayer/SplitContainer"]
+custom_minimum_size = Vector2(298, 0)
 layout_mode = 2
 color = Color(0.176471, 0.176471, 0.176471, 1)
 
@@ -69,73 +46,17 @@ theme_override_constants/margin_bottom = 10
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/SplitContainer/背景色/MarginContainer"]
 layout_mode = 2
+script = ExtResource("3_lb4v7")
 
 [node name="层级树" type="Control" parent="CanvasLayer/SplitContainer/背景色/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 script = ExtResource("3_46ykk")
 
-[node name="详细面板控件" type="Control" parent="CanvasLayer/SplitContainer/背景色/MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(0, 150)
-layout_mode = 2
-size_flags_vertical = 0
-script = ExtResource("6_a45gf")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/SplitContainer/背景色/MarginContainer/VBoxContainer/详细面板控件"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/SplitContainer/背景色/MarginContainer/VBoxContainer/详细面板控件/VBoxContainer"]
-custom_minimum_size = Vector2(0, 25)
-layout_mode = 2
-alignment = 2
-
-[node name="Button" type="Button" parent="CanvasLayer/SplitContainer/背景色/MarginContainer/VBoxContainer/详细面板控件/VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(28, 0)
-layout_mode = 2
-focus_mode = 0
-theme_override_constants/icon_max_width = 15
-theme_override_styles/focus = SubResource("StyleBoxEmpty_cggou")
-theme_override_styles/normal = SubResource("StyleBoxFlat_q3vrv")
-icon = ExtResource("7_58xjj")
-icon_alignment = 1
-expand_icon = true
-
-[node name="Button2" type="Button" parent="CanvasLayer/SplitContainer/背景色/MarginContainer/VBoxContainer/详细面板控件/VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(28, 0)
-layout_mode = 2
-focus_mode = 0
-theme_override_constants/icon_max_width = 19
-theme_override_styles/focus = SubResource("StyleBoxEmpty_cggou")
-theme_override_styles/normal = SubResource("StyleBoxFlat_q3vrv")
-icon = ExtResource("8_116oy")
-icon_alignment = 1
-expand_icon = true
-
-[node name="Button3" type="Button" parent="CanvasLayer/SplitContainer/背景色/MarginContainer/VBoxContainer/详细面板控件/VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(28, 0)
-layout_mode = 2
-focus_mode = 0
-theme_override_constants/icon_max_width = 24
-theme_override_styles/focus = SubResource("StyleBoxEmpty_cggou")
-theme_override_styles/normal = SubResource("StyleBoxFlat_q3vrv")
-icon = ExtResource("9_qlr36")
-icon_alignment = 1
-expand_icon = true
-
-[node name="Panel" type="Panel" parent="CanvasLayer/SplitContainer/背景色/MarginContainer/VBoxContainer/详细面板控件/VBoxContainer"]
-custom_minimum_size = Vector2(0, 100)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_4c3ge")
-
-[node name="屏幕截图2025-01-05091540" type="Sprite2D" parent="CanvasLayer/SplitContainer/背景色/MarginContainer/VBoxContainer"]
+[node name="屏幕截图2025-01-05091540" type="Sprite2D" parent="."]
 visible = false
-self_modulate = Color(1, 1, 1, 0.203922)
-position = Vector2(127, 663)
+modulate = Color(1, 1, 1, 0.258824)
+position = Vector2(991, 548)
 texture = ExtResource("7_6le7h")
 
 [node name="Node2D" parent="." instance=ExtResource("12_cvt10")]

@@ -39,7 +39,7 @@ position = Vector2(594, 66)
 texture = ExtResource("2_ybv4h")
 
 [node name="Bone2D2" type="Bone2D" parent="Skeleton2D/root"]
-position = Vector2(57, 53)
+position = Vector2(229, 159)
 rest = Transform2D(1, 0, 0, 1, 57, 53)
 
 [node name="Bone2D" type="Bone2D" parent="Skeleton2D/root/Bone2D2"]
@@ -54,7 +54,7 @@ length = 93.837
 bone_angle = -46.957
 
 [node name="Bone2D2" type="Bone2D" parent="Skeleton2D/root/Bone2D2"]
-position = Vector2(57, 53)
+position = Vector2(-64, 158)
 rest = Transform2D(1, 0, 0, 1, 57, 53)
 
 [node name="Bone2D" type="Bone2D" parent="Skeleton2D/root/Bone2D2/Bone2D2"]
@@ -69,7 +69,7 @@ length = 93.837
 bone_angle = -46.957
 
 [node name="Bone2D2" type="Bone2D" parent="Skeleton2D/root/Bone2D2/Bone2D2"]
-position = Vector2(57, 53)
+position = Vector2(121, 105)
 rest = Transform2D(1, 0, 0, 1, 57, 53)
 
 [node name="Bone2D" type="Bone2D" parent="Skeleton2D/root/Bone2D2/Bone2D2/Bone2D2"]
@@ -84,7 +84,7 @@ length = 93.837
 bone_angle = -46.957
 
 [node name="Bone2D2" type="Bone2D" parent="Skeleton2D/root/Bone2D2/Bone2D2/Bone2D2"]
-position = Vector2(57, 53)
+position = Vector2(147, 103)
 rest = Transform2D(1, 0, 0, 1, 57, 53)
 
 [node name="Bone2D" type="Bone2D" parent="Skeleton2D/root/Bone2D2/Bone2D2/Bone2D2/Bone2D2"]
@@ -99,7 +99,7 @@ length = 93.837
 bone_angle = -46.957
 
 [node name="Bone2D2" type="Bone2D" parent="Skeleton2D/root/Bone2D2/Bone2D2/Bone2D2/Bone2D2"]
-position = Vector2(57, 53)
+position = Vector2(41, -158)
 rest = Transform2D(1, 0, 0, 1, 57, 53)
 
 [node name="Bone2D" type="Bone2D" parent="Skeleton2D/root/Bone2D2/Bone2D2/Bone2D2/Bone2D2/Bone2D2"]

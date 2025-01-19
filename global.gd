@@ -30,3 +30,5 @@ signal 添加节点(node)
 signal 重命名节点(node)
 
 signal 删除节点(node)
+
+signal 复制节点(old_node,new_node)

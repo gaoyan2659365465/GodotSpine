@@ -10,7 +10,7 @@ void fragment(){
     vec2 uv_offset = (1.-TEXTURE_SCALE)*.5;
     vec2 uv = UV/TEXTURE_SCALE-uv_offset;
     
-    vec4 cc = texture(TEXTURE,uv);
+    vec4 cc = COLOR;//texture(TEXTURE,uv);
     if(UV.x<uv_offset.x || UV.x>1.-uv_offset.x){
         cc.a = 0.;
     }
