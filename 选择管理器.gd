@@ -43,6 +43,16 @@ func _process(delta: float) -> void:
 				Global.绘制控件.绘制缩放控件(选中.get_canvas_transform()*选中.global_position)
 			elif Global.变换模式 == "倾斜":
 				pass
+		if 选中 is Polygon2D:
+			Global.绘制控件.绘制网格(选中)
+			if Global.变换模式 == "旋转":
+				Global.绘制控件.绘制旋转控件(选中.get_canvas_transform()*选中.global_position, 选中.rotation_degrees)
+			elif Global.变换模式 == "移动":
+				Global.绘制控件.绘制移动控件(选中.get_canvas_transform()*选中.global_position)
+			elif Global.变换模式 == "缩放":
+				Global.绘制控件.绘制缩放控件(选中.get_canvas_transform()*选中.global_position)
+			elif Global.变换模式 == "倾斜":
+				pass
 		if 选中 is Bone2D:
 			if Global.变换模式 == "旋转":
 				Global.绘制控件.绘制旋转控件(选中.get_canvas_transform()*选中.global_position, 选中.rotation_degrees)
@@ -54,6 +64,12 @@ func _process(delta: float) -> void:
 				pass
 	if 预选中:
 		if 预选中 is Sprite2D:
+			var tran = 预选中.get_global_transform_with_canvas()
+			tran = tran.rotated(-1*tran.get_rotation())# 旋转不能直接乘rect，需要绘制时候对画布旋转
+			var rect = 预选中.get_rect()
+			if 预选中.visible == true:# BUG 仅显示的节点能显示虚线框
+				Global.绘制控件.绘制矩形虚线框(tran * rect,预选中)
+		if 预选中 is Polygon2D:
 			var tran = 预选中.get_global_transform_with_canvas()
 			tran = tran.rotated(-1*tran.get_rotation())# 旋转不能直接乘rect，需要绘制时候对画布旋转
 			var rect = 预选中.get_rect()

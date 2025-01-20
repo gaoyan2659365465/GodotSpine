@@ -38,6 +38,10 @@ func 绘制缩放控件(pos:Vector2):
 func 绘制骨骼(node):
 	绘制数据.append(["骨骼",node])
 
+func 绘制网格(node):
+	绘制数据.append(["网格",node])
+
+
 func 绘制弹窗():
 	var 弹窗 = preload("res://弹窗/弹窗.gd").new()
 	add_child(弹窗)
@@ -271,5 +275,29 @@ func _draw() -> void:
 					draw_colored_polygon(pos,颜色,pos)
 					draw_polyline(pos,颜色,3,true)
 				draw_set_transform(Vector2.ZERO)
+		elif data[0] == "网格":
+			var node:Polygon2D = data[1]
+			var tran = node.get_global_transform_with_canvas()
+			#draw_set_transform_matrix(tran)
+			#draw_set_transform_matrix(node.get_global_transform())
+			if node.visible:# 骨骼显示与否
+				for pos in node.polygon:
+					var global_pos = tran*pos
+					draw_circle(global_pos,2,Color("#01fdfd"),true,-1.0,true)
+				var n = 0
+				for pos in node.polygon:
+					var 外部点数 = node.polygon.size()-1-node.internal_vertex_count
+					if n > 外部点数:# 不画内部线
+						break
+					var global_pos_1 = tran*pos
+					var global_pos_2
+					if n == 外部点数:
+						global_pos_2 = tran*node.polygon[0]
+					else:
+						global_pos_2 = tran*node.polygon[n+1]
+					var line_pos = [global_pos_1,global_pos_2]
+					draw_polyline(line_pos,Color("#01fdfd"),0.5,true)
+					n+=1
+			draw_set_transform(Vector2.ZERO)
 
 	绘制数据.clear()

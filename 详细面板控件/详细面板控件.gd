@@ -92,6 +92,9 @@ func 创建子项():
 		elif 选中 as Sprite2D:
 			var p = preload("res://详细面板控件/区域详细面板.gd").new()
 			add_child(p)
+		elif 选中 as Polygon2D:
+			var p = preload("res://详细面板控件/区域详细面板.gd").new()
+			add_child(p)
 		elif 选中 as Node2D:
 			var p = preload("res://详细面板控件/插槽详细面板.gd").new()
 			add_child(p)

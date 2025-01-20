@@ -18,3 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 Global="*res://global.gd"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/spine/plugin.cfg")

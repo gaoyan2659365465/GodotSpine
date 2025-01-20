@@ -138,6 +138,17 @@ func 递归所有节点(target:Node,parent:TreeItem):
 			i._ready()
 			i.set_process_input(true)
 			i.set_process(true)
+		elif i is Polygon2D:
+			new_parent = tree.create_item(parent)
+			new_parent.set_text(0, i.name)
+			new_parent.set_icon(0,preload("res://资源/多边形.svg"))
+			new_parent.set_icon_max_width(0,14)
+			new_parent.set_meta("node",i)
+			new_parent.set_meta("node_type","Polygon2D")
+			i.set_script(preload("res://多边形.gd"))
+			i._ready()
+			i.set_process_input(true)
+			i.set_process(true)
 		elif i is Node2D:
 			new_parent = tree.create_item(parent)
 			new_parent.set_text(0, i.name)
