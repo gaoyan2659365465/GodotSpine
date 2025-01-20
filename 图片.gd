@@ -27,7 +27,7 @@ func _input(event: InputEvent) -> void:
 	if not Global.绘制控件.鼠标进入:
 		return
 	if event is InputEventMouseButton:
-		if not event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		if event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 			var tran = get_global_transform()#仅受缩放影响，不受相机影响
 			var rect = tran * get_rect()
 			if rect.has_point(get_global_mouse_position()):

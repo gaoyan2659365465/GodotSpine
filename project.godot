@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Godot版Spine"
-run/main_scene="res://主视口.tscn"
+run/main_scene="res://spine转换/spineboy-pro.json"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 

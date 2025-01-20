@@ -1,4 +1,4 @@
-[gd_scene load_steps=109 format=3 uid="uid://d4neojyfx83nc"]
+[gd_scene load_steps=109 format=3 uid="uid://b1kutoaj88d4r"]
 
 [ext_resource type="Script" path="res://addons/spine/插槽.gd" id="1_3tixm"]
 [ext_resource type="Texture2D" uid="uid://cjmaqilc3qmow" path="res://spine转换/spineboy-pro/rear-shin.png" id="2_guc0x"]
@@ -42,192 +42,183 @@
 [ext_resource type="Texture2D" uid="uid://be4snp7qc7yk4" path="res://spine转换/spineboy-pro/torso.png" id="40_3ah38"]
 [ext_resource type="Texture2D" uid="uid://cf4c278urv8x4" path="res://spine转换/spineboy-pro/rear-foot.png" id="41_k1lmp"]
 
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_218f0"]
-bone_index = 37
+[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_q3b0c"]
 bone2d_node = NodePath("root/hoverboard-controller")
 target_nodepath = NodePath("root/board-ik")
 
-[sub_resource type="SkeletonModification2DTwoBoneIK" id="SkeletonModification2DTwoBoneIK_g7ujv"]
+[sub_resource type="SkeletonModification2DTwoBoneIK" id="SkeletonModification2DTwoBoneIK_0crsi"]
 target_nodepath = NodePath("root/front-foot-target/front-leg-target")
-joint_one_bone_idx = 28
 joint_one_bone2d_node = NodePath("root/hip/front-thigh")
-joint_two_bone_idx = 29
 joint_two_bone2d_node = NodePath("root/hip/front-thigh/front-shin")
 
-[sub_resource type="SkeletonModification2DTwoBoneIK" id="SkeletonModification2DTwoBoneIK_qe77y"]
+[sub_resource type="SkeletonModification2DTwoBoneIK" id="SkeletonModification2DTwoBoneIK_lsm4v"]
 target_nodepath = NodePath("root/rear-foot-target/rear-leg-target")
-joint_one_bone_idx = 3
 joint_one_bone2d_node = NodePath("root/hip/rear-thigh")
-joint_two_bone_idx = 4
 joint_two_bone2d_node = NodePath("root/hip/rear-thigh/rear-shin")
 
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_awsvi"]
-bone_index = 30
+[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_7nrov"]
 bone2d_node = NodePath("root/hip/front-thigh/front-shin/front-foot")
 target_nodepath = NodePath("root/front-foot-target")
 
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_1skqn"]
-bone_index = 5
+[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_nu16s"]
 bone2d_node = NodePath("root/hip/rear-thigh/rear-shin/rear-foot")
 target_nodepath = NodePath("root/rear-foot-target")
 
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_sf76n"]
-bone_index = 2
+[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_eg0j1"]
 bone2d_node = NodePath("root/hip/aim-constraint-target")
 target_nodepath = NodePath("root/crosshair")
 
-[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_5l3mt"]
-bone_index = 13
+[sub_resource type="SkeletonModification2DLookAt" id="SkeletonModification2DLookAt_vdrkm"]
 bone2d_node = NodePath("root/hip/torso/torso2/torso3/rear-upper-arm")
 target_nodepath = NodePath("root/crosshair")
 
-[sub_resource type="SkeletonModificationStack2D" id="SkeletonModificationStack2D_limb4"]
+[sub_resource type="SkeletonModificationStack2D" id="SkeletonModificationStack2D_54p2e"]
 enabled = true
 modification_count = 7
-modifications/0 = SubResource("SkeletonModification2DLookAt_218f0")
-modifications/1 = SubResource("SkeletonModification2DTwoBoneIK_g7ujv")
-modifications/2 = SubResource("SkeletonModification2DTwoBoneIK_qe77y")
-modifications/3 = SubResource("SkeletonModification2DLookAt_awsvi")
-modifications/4 = SubResource("SkeletonModification2DLookAt_1skqn")
-modifications/5 = SubResource("SkeletonModification2DLookAt_sf76n")
-modifications/6 = SubResource("SkeletonModification2DLookAt_5l3mt")
+modifications/0 = SubResource("SkeletonModification2DLookAt_q3b0c")
+modifications/1 = SubResource("SkeletonModification2DTwoBoneIK_0crsi")
+modifications/2 = SubResource("SkeletonModification2DTwoBoneIK_lsm4v")
+modifications/3 = SubResource("SkeletonModification2DLookAt_7nrov")
+modifications/4 = SubResource("SkeletonModification2DLookAt_nu16s")
+modifications/5 = SubResource("SkeletonModification2DLookAt_eg0j1")
+modifications/6 = SubResource("SkeletonModification2DLookAt_vdrkm")
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_faway"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_p164y"]
 blend_mode = 1
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_nrrhd"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_5t622"]
 blend_mode = 1
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_grgdv"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_q7xtr"]
 blend_mode = 1
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_fgb0o"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_a6jfy"]
 blend_mode = 1
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_576wl"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_janrn"]
 blend_mode = 1
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_mywji"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_03m58"]
 blend_mode = 1
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_un0pb"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_6pghk"]
 blend_mode = 1
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_q863y"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_j5l0j"]
 blend_mode = 1
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_2kvmp"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ephjy"]
 blend_mode = 1
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_6hqdx"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_eumw8"]
 blend_mode = 1
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_acv5u"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_q08q3"]
 blend_mode = 1
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_65jqt"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_vf1t1"]
 blend_mode = 1
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_erw54"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_bt5rq"]
 blend_mode = 1
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_4kf57"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_xi6v1"]
 blend_mode = 1
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_4u282"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ue8ky"]
 blend_mode = 1
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_3e3m4"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_f61qo"]
 blend_mode = 1
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_847r7"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_rdus4"]
 blend_mode = 1
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_bhc5p"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_420m3"]
 blend_mode = 1
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_amld3"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_nejd1"]
 blend_mode = 1
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_rw0a4"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_5va0f"]
 blend_mode = 1
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ffokq"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_cf1rn"]
 blend_mode = 1
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_1t61q"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_26i5e"]
 blend_mode = 1
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_bjqw6"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_p0h2e"]
 blend_mode = 1
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ls2fq"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_1x4t3"]
 blend_mode = 1
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_tgnwu"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_pol5j"]
 blend_mode = 1
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_6xi1c"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_oa7ev"]
 blend_mode = 1
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_qfno1"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_b7ppo"]
 blend_mode = 1
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_8hntn"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_jmafv"]
 blend_mode = 1
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_bcl8k"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_fmagy"]
 blend_mode = 1
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_7k1w3"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_m8mul"]
 blend_mode = 1
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_v20f0"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_luvpg"]
 blend_mode = 1
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_lteqq"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_bblt4"]
 blend_mode = 1
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_3lbww"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_lmu6j"]
 blend_mode = 1
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_fupmd"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_bgywj"]
 blend_mode = 1
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_qoe64"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_vn0n1"]
 blend_mode = 1
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_2ihnr"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_xry7r"]
 blend_mode = 1
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_fudmh"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_q6vbj"]
 blend_mode = 1
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_12gew"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ux1ml"]
 blend_mode = 1
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_xmxmq"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_mxlo6"]
 blend_mode = 1
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_3jhgv"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_vhc7y"]
 blend_mode = 1
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_sfn7j"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_3vm0g"]
 blend_mode = 1
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_fax00"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_rl7qy"]
 blend_mode = 1
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_00eo8"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_d8qu1"]
 blend_mode = 1
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_544pa"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_031p8"]
 blend_mode = 1
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_2rkui"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_po7ad"]
 blend_mode = 1
 
-[sub_resource type="Animation" id="Animation_pj8y2"]
+[sub_resource type="Animation" id="Animation_3boia"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -3782,12 +3773,12 @@ tracks/295/keys = {
 "values": [Vector2(0.738, 0.738)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_0bmjp"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ek322"]
 _data = {
-"RESET": SubResource("Animation_pj8y2")
+"RESET": SubResource("Animation_3boia")
 }
 
-[sub_resource type="Animation" id="Animation_5ie4n"]
+[sub_resource type="Animation" id="Animation_t1vnx"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -3910,7 +3901,7 @@ tracks/9/keys = {
 "values": [0.100182]
 }
 
-[sub_resource type="Animation" id="Animation_apeng"]
+[sub_resource type="Animation" id="Animation_n17wu"]
 length = 4.9333
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -4189,7 +4180,7 @@ tracks/22/keys = {
 "values": [-0.879995, -0.471239, -0.599695, -1.21213, -0.794299, -0.90251]
 }
 
-[sub_resource type="Animation" id="Animation_js0nr"]
+[sub_resource type="Animation" id="Animation_gdy4k"]
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -4863,7 +4854,7 @@ tracks/55/keys = {
 "values": [0.0607375, -0.128456, -0.182212, 0.0607375]
 }
 
-[sub_resource type="Animation" id="Animation_tvcoe"]
+[sub_resource type="Animation" id="Animation_j373m"]
 length = 1.6667
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -5034,7 +5025,7 @@ tracks/13/keys = {
 "values": [0.484503, 0.455356, 0.484503]
 }
 
-[sub_resource type="Animation" id="Animation_32ky0"]
+[sub_resource type="Animation" id="Animation_4ihf8"]
 length = 0.2667
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -5349,7 +5340,7 @@ tracks/25/keys = {
 "values": [Vector2(-7.2, 7.01), Vector2(8.91, 5.63)]
 }
 
-[sub_resource type="Animation" id="Animation_6g6bj"]
+[sub_resource type="Animation" id="Animation_6unhg"]
 length = 1.3333
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -5688,7 +5679,7 @@ tracks/27/keys = {
 "values": [0.463559, 0.653277, 0.971625, 0.694117, 0.463559]
 }
 
-[sub_resource type="Animation" id="Animation_ngo2a"]
+[sub_resource type="Animation" id="Animation_rwls4"]
 length = 3.6
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -6675,7 +6666,7 @@ tracks/81/keys = {
 "values": [Vector2(2.657, 0.891), Vector2(3.314, 1.425), Vector2(2.871, 0.924), Vector2(2.317, 0.775)]
 }
 
-[sub_resource type="Animation" id="Animation_gs7lk"]
+[sub_resource type="Animation" id="Animation_iw4rr"]
 length = 0.8
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -7158,7 +7149,7 @@ tracks/39/keys = {
 "values": [-0.0788889]
 }
 
-[sub_resource type="Animation" id="Animation_mb6oq"]
+[sub_resource type="Animation" id="Animation_qiuhi"]
 length = 0.2667
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -7389,7 +7380,7 @@ tracks/18/keys = {
 "values": [-0.879995, -0.877552, -0.879995]
 }
 
-[sub_resource type="Animation" id="Animation_6lh76"]
+[sub_resource type="Animation" id="Animation_qggbi"]
 length = 0.6333
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -7692,7 +7683,7 @@ tracks/24/keys = {
 "values": [Vector2(0, 0), Vector2(392.06, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_08i0f"]
+[sub_resource type="Animation" id="Animation_y0mxh"]
 length = 0.8667
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -8139,25 +8130,25 @@ tracks/36/keys = {
 "values": [-0.881042]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_vcofs"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_q6y6u"]
 _data = {
-"aim": SubResource("Animation_5ie4n"),
-"death": SubResource("Animation_apeng"),
-"hoverboard": SubResource("Animation_js0nr"),
-"idle": SubResource("Animation_tvcoe"),
-"idle-turn": SubResource("Animation_32ky0"),
-"jump": SubResource("Animation_6g6bj"),
-"portal": SubResource("Animation_ngo2a"),
-"run": SubResource("Animation_gs7lk"),
-"run-to-idle": SubResource("Animation_mb6oq"),
-"shoot": SubResource("Animation_6lh76"),
-"walk": SubResource("Animation_08i0f")
+"aim": SubResource("Animation_t1vnx"),
+"death": SubResource("Animation_n17wu"),
+"hoverboard": SubResource("Animation_gdy4k"),
+"idle": SubResource("Animation_j373m"),
+"idle-turn": SubResource("Animation_4ihf8"),
+"jump": SubResource("Animation_6unhg"),
+"portal": SubResource("Animation_rwls4"),
+"run": SubResource("Animation_iw4rr"),
+"run-to-idle": SubResource("Animation_qiuhi"),
+"shoot": SubResource("Animation_qggbi"),
+"walk": SubResource("Animation_y0mxh")
 }
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Skeleton2D" type="Skeleton2D" parent="."]
-modification_stack = SubResource("SkeletonModificationStack2D_limb4")
+modification_stack = SubResource("SkeletonModificationStack2D_54p2e")
 
 [node name="root" type="Bone2D" parent="Skeleton2D"]
 rotation = -0.00488692
@@ -8180,7 +8171,6 @@ rest = Transform2D(0.941999, -0.335616, 0.335616, 0.941999, 1.02, -5.62)
 auto_calculate_length_and_angle = false
 length = 26.24
 bone_angle = 0.0
-metadata/_local_pose_override_enabled_ = true
 
 [node name="rear-thigh" type="Bone2D" parent="Skeleton2D/root/hip"]
 position = Vector2(8.91, 5.63)
@@ -8189,7 +8179,6 @@ rest = Transform2D(0.30004, 0.953927, -0.953927, 0.30004, 8.91, 5.63)
 auto_calculate_length_and_angle = false
 length = 85.72
 bone_angle = 0.0
-metadata/_local_pose_override_enabled_ = true
 
 [node name="rear-shin" type="Bone2D" parent="Skeleton2D/root/hip/rear-thigh"]
 position = Vector2(86.1, 1.33)
@@ -8198,7 +8187,6 @@ rest = Transform2D(0.940703, 0.339231, -0.339231, 0.940703, 86.1, 1.33)
 auto_calculate_length_and_angle = false
 length = 121.88
 bone_angle = 0.0
-metadata/_local_pose_override_enabled_ = true
 
 [node name="rear-foot" type="Bone2D" parent="Skeleton2D/root/hip/rear-thigh/rear-shin"]
 position = Vector2(121.46, 0.76)
@@ -8207,7 +8195,6 @@ rest = Transform2D(0.697415, -0.716667, 0.716667, 0.697415, 121.46, 0.76)
 auto_calculate_length_and_angle = false
 length = 51.58
 bone_angle = 0.0
-metadata/_local_pose_override_enabled_ = true
 
 [node name="back-foot-tip" type="Bone2D" parent="Skeleton2D/root/hip/rear-thigh/rear-shin/rear-foot"]
 position = Vector2(51.17, -0.24)
@@ -8221,7 +8208,6 @@ bone_angle = 0.0
 z_index = 24
 z_as_relative = false
 script = ExtResource("1_3tixm")
-"切换名" = "rear-shin"
 
 [node name="rear-shin" type="Sprite2D" parent="Skeleton2D/root/hip/rear-thigh/rear-shin/rear-shin"]
 position = Vector2(58.29, 2.75)
@@ -8232,7 +8218,6 @@ texture = ExtResource("2_guc0x")
 z_index = 23
 z_as_relative = false
 script = ExtResource("1_3tixm")
-"切换名" = "rear-thigh"
 
 [node name="rear-thigh" type="Sprite2D" parent="Skeleton2D/root/hip/rear-thigh/rear-thigh"]
 position = Vector2(33.11, 4.11)
@@ -8289,7 +8274,6 @@ bone_angle = 0.0
 z_index = 36
 z_as_relative = false
 script = ExtResource("1_3tixm")
-"切换名" = "front-fist-closed"
 
 [node name="front-fist-closed" type="Sprite2D" parent="Skeleton2D/root/hip/torso/torso2/torso3/front-upper-arm/front-bracer/front-fist/front-fist"]
 position = Vector2(35.5, -6)
@@ -8306,7 +8290,6 @@ texture = ExtResource("5_exj2j")
 z_index = 35
 z_as_relative = false
 script = ExtResource("1_3tixm")
-"切换名" = "front-bracer"
 
 [node name="front-bracer" type="Sprite2D" parent="Skeleton2D/root/hip/torso/torso2/torso3/front-upper-arm/front-bracer/front-bracer"]
 position = Vector2(12.03, 1.68)
@@ -8317,7 +8300,6 @@ texture = ExtResource("6_3siww")
 z_index = 27
 z_as_relative = false
 script = ExtResource("1_3tixm")
-"切换名" = "front-upper-arm"
 
 [node name="front-upper-arm" type="Sprite2D" parent="Skeleton2D/root/hip/torso/torso2/torso3/front-upper-arm/front-upper-arm"]
 position = Vector2(28.31, -7.37)
@@ -8331,7 +8313,6 @@ rest = Transform2D(-0.983445, 0.181206, -0.181206, -0.983445, 7.32, 19.22)
 auto_calculate_length_and_angle = false
 length = 51.94
 bone_angle = 0.0
-metadata/_local_pose_override_enabled_ = true
 
 [node name="rear-bracer" type="Bone2D" parent="Skeleton2D/root/hip/torso/torso2/torso3/rear-upper-arm"]
 position = Vector2(51.36, 0)
@@ -8365,14 +8346,13 @@ script = ExtResource("1_3tixm")
 
 [node name="muzzle-glow" type="Sprite2D" parent="Skeleton2D/root/hip/torso/torso2/torso3/rear-upper-arm/rear-bracer/gun/gun-tip/muzzle-glow"]
 visible = false
-material = SubResource("CanvasItemMaterial_faway")
+material = SubResource("CanvasItemMaterial_p164y")
 texture = ExtResource("8_eqkvn")
 
 [node name="gun" type="Node2D" parent="Skeleton2D/root/hip/torso/torso2/torso3/rear-upper-arm/rear-bracer/gun"]
 z_index = 21
 z_as_relative = false
 script = ExtResource("1_3tixm")
-"切换名" = "gun"
 
 [node name="gun" type="Sprite2D" parent="Skeleton2D/root/hip/torso/torso2/torso3/rear-upper-arm/rear-bracer/gun/gun"]
 position = Vector2(77.3, -16.4)
@@ -8401,7 +8381,7 @@ script = ExtResource("1_3tixm")
 
 [node name="muzzle-ring" type="Sprite2D" parent="Skeleton2D/root/hip/torso/torso2/torso3/rear-upper-arm/rear-bracer/muzzle/muzzle-ring/muzzle-ring"]
 visible = false
-material = SubResource("CanvasItemMaterial_nrrhd")
+material = SubResource("CanvasItemMaterial_5t622")
 position = Vector2(-1.3, -0.32)
 scale = Vector2(0.3147, 0.3147)
 texture = ExtResource("10_hsh53")
@@ -8420,7 +8400,7 @@ script = ExtResource("1_3tixm")
 
 [node name="muzzle-ring" type="Sprite2D" parent="Skeleton2D/root/hip/torso/torso2/torso3/rear-upper-arm/rear-bracer/muzzle/muzzle-ring2/muzzle-ring2"]
 visible = false
-material = SubResource("CanvasItemMaterial_grgdv")
+material = SubResource("CanvasItemMaterial_q7xtr")
 position = Vector2(-1.3, -0.32)
 scale = Vector2(0.3147, 0.3147)
 texture = ExtResource("10_hsh53")
@@ -8439,7 +8419,7 @@ script = ExtResource("1_3tixm")
 
 [node name="muzzle-ring" type="Sprite2D" parent="Skeleton2D/root/hip/torso/torso2/torso3/rear-upper-arm/rear-bracer/muzzle/muzzle-ring3/muzzle-ring3"]
 visible = false
-material = SubResource("CanvasItemMaterial_fgb0o")
+material = SubResource("CanvasItemMaterial_a6jfy")
 position = Vector2(-1.3, -0.32)
 scale = Vector2(0.3147, 0.3147)
 texture = ExtResource("10_hsh53")
@@ -8458,7 +8438,7 @@ script = ExtResource("1_3tixm")
 
 [node name="muzzle-ring" type="Sprite2D" parent="Skeleton2D/root/hip/torso/torso2/torso3/rear-upper-arm/rear-bracer/muzzle/muzzle-ring4/muzzle-ring4"]
 visible = false
-material = SubResource("CanvasItemMaterial_576wl")
+material = SubResource("CanvasItemMaterial_janrn")
 position = Vector2(-1.3, -0.32)
 scale = Vector2(0.3147, 0.3147)
 texture = ExtResource("10_hsh53")
@@ -8507,7 +8487,6 @@ texture = ExtResource("15_kadod")
 z_index = 20
 z_as_relative = false
 script = ExtResource("1_3tixm")
-"切换名" = "rear-bracer"
 
 [node name="rear-bracer" type="Sprite2D" parent="Skeleton2D/root/hip/torso/torso2/torso3/rear-upper-arm/rear-bracer/rear-bracer"]
 position = Vector2(11.15, 2.2)
@@ -8518,7 +8497,6 @@ texture = ExtResource("16_cg2mq")
 z_index = 19
 z_as_relative = false
 script = ExtResource("1_3tixm")
-"切换名" = "rear-upper-arm"
 
 [node name="rear-upper-arm" type="Sprite2D" parent="Skeleton2D/root/hip/torso/torso2/torso3/rear-upper-arm/rear-upper-arm"]
 position = Vector2(21.13, -4.09)
@@ -8577,7 +8555,6 @@ bone_angle = 0.0
 z_index = 29
 z_as_relative = false
 script = ExtResource("1_3tixm")
-"切换名" = "eye-indifferent"
 
 [node name="eye-indifferent" type="Polygon2D" parent="Skeleton2D/root/hip/torso/torso2/torso3/neck/head/eye"]
 texture = ExtResource("18_6j08k")
@@ -8595,7 +8572,6 @@ texture = ExtResource("19_yp5o8")
 z_index = 33
 z_as_relative = false
 script = ExtResource("1_3tixm")
-"切换名" = "mouth-smile"
 
 [node name="mouth-grind" type="Polygon2D" parent="Skeleton2D/root/hip/torso/torso2/torso3/neck/head/mouth"]
 visible = false
@@ -8620,7 +8596,6 @@ polygons = [[1.0, 2.0, 3.0], [1.0, 3.0, 0.0]]
 z_index = 34
 z_as_relative = false
 script = ExtResource("1_3tixm")
-"切换名" = "goggles"
 
 [node name="goggles" type="Polygon2D" parent="Skeleton2D/root/hip/torso/torso2/torso3/neck/head/goggles"]
 texture = ExtResource("23_m3pa3")
@@ -8638,7 +8613,6 @@ script = ExtResource("1_3tixm")
 z_index = 25
 z_as_relative = false
 script = ExtResource("1_3tixm")
-"切换名" = "neck"
 
 [node name="neck" type="Sprite2D" parent="Skeleton2D/root/hip/torso/torso2/torso3/neck/neck"]
 position = Vector2(9.77, 3.01)
@@ -8652,7 +8626,6 @@ rest = Transform2D(-0.0960194, 0.995379, -0.995379, -0.0960194, -17.46, 11.64)
 auto_calculate_length_and_angle = false
 length = 74.81
 bone_angle = 0.0
-metadata/_local_pose_override_enabled_ = true
 
 [node name="front-shin" type="Bone2D" parent="Skeleton2D/root/hip/front-thigh"]
 position = Vector2(78.69, -1.6)
@@ -8661,7 +8634,6 @@ rest = Transform2D(0.999256, 0.0385622, -0.0385622, 0.999256, 78.69, -1.6)
 auto_calculate_length_and_angle = false
 length = 128.77
 bone_angle = 0.0
-metadata/_local_pose_override_enabled_ = true
 
 [node name="front-foot" type="Bone2D" parent="Skeleton2D/root/hip/front-thigh/front-shin"]
 position = Vector2(128.76, 0.34)
@@ -8670,7 +8642,6 @@ rest = Transform2D(0.625651, -0.780103, 0.780103, 0.625651, 128.76, 0.34)
 auto_calculate_length_and_angle = false
 length = 41.01
 bone_angle = 0.0
-metadata/_local_pose_override_enabled_ = true
 
 [node name="front-foot-tip" type="Bone2D" parent="Skeleton2D/root/hip/front-thigh/front-shin/front-foot"]
 position = Vector2(41.42, 0.09)
@@ -8684,7 +8655,6 @@ bone_angle = 0.0
 z_index = 32
 z_as_relative = false
 script = ExtResource("1_3tixm")
-"切换名" = "front-shin"
 
 [node name="front-shin" type="Polygon2D" parent="Skeleton2D/root/hip/front-thigh/front-shin/front-shin"]
 texture = ExtResource("25_ehlk7")
@@ -8697,7 +8667,6 @@ internal_vertex_count = 27
 z_index = 30
 z_as_relative = false
 script = ExtResource("1_3tixm")
-"切换名" = "front-thigh"
 
 [node name="front-thigh" type="Sprite2D" parent="Skeleton2D/root/hip/front-thigh/front-thigh"]
 position = Vector2(42.48, -4.45)
@@ -8759,7 +8728,6 @@ rest = Transform2D(0.999988, 0.0048869, -0.0048869, 0.999988, -329.69, -69.82)
 auto_calculate_length_and_angle = false
 length = 16.0
 bone_angle = 0.0
-metadata/_local_pose_override_enabled_ = true
 
 [node name="exhaust1" type="Bone2D" parent="Skeleton2D/root/hoverboard-controller"]
 position = Vector2(-249.68, -53.39)
@@ -8777,7 +8745,7 @@ script = ExtResource("1_3tixm")
 
 [node name="hoverglow-small" type="Sprite2D" parent="Skeleton2D/root/hoverboard-controller/exhaust1/exhaust2"]
 visible = false
-material = SubResource("CanvasItemMaterial_mywji")
+material = SubResource("CanvasItemMaterial_03m58")
 position = Vector2(0.01, 0.76)
 rotation = 1.55771
 scale = Vector2(0.4208, 0.8403)
@@ -8799,7 +8767,7 @@ script = ExtResource("1_3tixm")
 
 [node name="hoverglow-small" type="Sprite2D" parent="Skeleton2D/root/hoverboard-controller/exhaust2/exhaust1"]
 visible = false
-material = SubResource("CanvasItemMaterial_un0pb")
+material = SubResource("CanvasItemMaterial_6pghk")
 rotation = 1.44984
 scale = Vector2(0.4629, 0.8129)
 texture = ExtResource("28_idv0o")
@@ -8821,7 +8789,7 @@ script = ExtResource("1_3tixm")
 
 [node name="hoverglow-small" type="Sprite2D" parent="Skeleton2D/root/hoverboard-controller/exhaust3/exhaust3"]
 visible = false
-material = SubResource("CanvasItemMaterial_q863y")
+material = SubResource("CanvasItemMaterial_j5l0j")
 rotation = 1.44984
 scale = Vector2(0.4629, 0.8129)
 texture = ExtResource("28_idv0o")
@@ -8850,7 +8818,7 @@ script = ExtResource("1_3tixm")
 
 [node name="hoverglow-small" type="Sprite2D" parent="Skeleton2D/root/hoverboard-controller/hoverboard-thruster-front/hoverglow-front/hoverglow-front"]
 visible = false
-material = SubResource("CanvasItemMaterial_2kvmp")
+material = SubResource("CanvasItemMaterial_ephjy")
 position = Vector2(2.13, 2)
 rotation = -0.00261799
 scale = Vector2(0.303, 0.495)
@@ -8891,7 +8859,7 @@ script = ExtResource("1_3tixm")
 
 [node name="hoverglow-small" type="Sprite2D" parent="Skeleton2D/root/hoverboard-controller/hoverboard-thruster-rear/hoverglow-rear/hoverglow-rear"]
 visible = false
-material = SubResource("CanvasItemMaterial_6hqdx")
+material = SubResource("CanvasItemMaterial_eumw8")
 position = Vector2(1.39, 2.09)
 rotation = -0.0106465
 scale = Vector2(0.303, 0.495)
@@ -8923,7 +8891,7 @@ script = ExtResource("1_3tixm")
 
 [node name="hoverglow-small" type="Sprite2D" parent="Skeleton2D/root/hoverboard-controller/side-glow1/side-glow1"]
 visible = false
-material = SubResource("CanvasItemMaterial_acv5u")
+material = SubResource("CanvasItemMaterial_q08q3")
 position = Vector2(2.09, 0)
 scale = Vector2(0.2353, 0.4132)
 texture = ExtResource("28_idv0o")
@@ -8936,7 +8904,7 @@ script = ExtResource("1_3tixm")
 
 [node name="hoverglow-small" type="Sprite2D" parent="Skeleton2D/root/hoverboard-controller/side-glow1/side-glow3"]
 visible = false
-material = SubResource("CanvasItemMaterial_65jqt")
+material = SubResource("CanvasItemMaterial_vf1t1")
 position = Vector2(2.09, 0)
 scale = Vector2(0.3586, 0.6297)
 texture = ExtResource("28_idv0o")
@@ -8957,7 +8925,7 @@ script = ExtResource("1_3tixm")
 
 [node name="hoverglow-small" type="Sprite2D" parent="Skeleton2D/root/hoverboard-controller/side-glow2/side-glow2"]
 visible = false
-material = SubResource("CanvasItemMaterial_erw54")
+material = SubResource("CanvasItemMaterial_bt5rq")
 position = Vector2(2.09, 0)
 scale = Vector2(0.2353, 0.4132)
 texture = ExtResource("28_idv0o")
@@ -8998,17 +8966,17 @@ script = ExtResource("1_3tixm")
 
 [node name="portal-flare1" type="Sprite2D" parent="Skeleton2D/root/portal-root/flare1/portal-flare1"]
 visible = false
-material = SubResource("CanvasItemMaterial_4kf57")
+material = SubResource("CanvasItemMaterial_xi6v1")
 texture = ExtResource("31_kh8xv")
 
 [node name="portal-flare2" type="Sprite2D" parent="Skeleton2D/root/portal-root/flare1/portal-flare1"]
 visible = false
-material = SubResource("CanvasItemMaterial_4u282")
+material = SubResource("CanvasItemMaterial_ue8ky")
 texture = ExtResource("32_p2vtd")
 
 [node name="portal-flare3" type="Sprite2D" parent="Skeleton2D/root/portal-root/flare1/portal-flare1"]
 visible = false
-material = SubResource("CanvasItemMaterial_3e3m4")
+material = SubResource("CanvasItemMaterial_f61qo")
 texture = ExtResource("33_1k753")
 
 [node name="flare10" type="Bone2D" parent="Skeleton2D/root/portal-root"]
@@ -9026,17 +8994,17 @@ script = ExtResource("1_3tixm")
 
 [node name="portal-flare1" type="Sprite2D" parent="Skeleton2D/root/portal-root/flare10/portal-flare10"]
 visible = false
-material = SubResource("CanvasItemMaterial_847r7")
+material = SubResource("CanvasItemMaterial_rdus4")
 texture = ExtResource("31_kh8xv")
 
 [node name="portal-flare2" type="Sprite2D" parent="Skeleton2D/root/portal-root/flare10/portal-flare10"]
 visible = false
-material = SubResource("CanvasItemMaterial_bhc5p")
+material = SubResource("CanvasItemMaterial_420m3")
 texture = ExtResource("32_p2vtd")
 
 [node name="portal-flare3" type="Sprite2D" parent="Skeleton2D/root/portal-root/flare10/portal-flare10"]
 visible = false
-material = SubResource("CanvasItemMaterial_amld3")
+material = SubResource("CanvasItemMaterial_nejd1")
 texture = ExtResource("33_1k753")
 
 [node name="flare2" type="Bone2D" parent="Skeleton2D/root/portal-root"]
@@ -9054,17 +9022,17 @@ script = ExtResource("1_3tixm")
 
 [node name="portal-flare1" type="Sprite2D" parent="Skeleton2D/root/portal-root/flare2/portal-flare2"]
 visible = false
-material = SubResource("CanvasItemMaterial_rw0a4")
+material = SubResource("CanvasItemMaterial_5va0f")
 texture = ExtResource("31_kh8xv")
 
 [node name="portal-flare2" type="Sprite2D" parent="Skeleton2D/root/portal-root/flare2/portal-flare2"]
 visible = false
-material = SubResource("CanvasItemMaterial_ffokq")
+material = SubResource("CanvasItemMaterial_cf1rn")
 texture = ExtResource("32_p2vtd")
 
 [node name="portal-flare3" type="Sprite2D" parent="Skeleton2D/root/portal-root/flare2/portal-flare2"]
 visible = false
-material = SubResource("CanvasItemMaterial_1t61q")
+material = SubResource("CanvasItemMaterial_26i5e")
 texture = ExtResource("33_1k753")
 
 [node name="flare3" type="Bone2D" parent="Skeleton2D/root/portal-root"]
@@ -9082,17 +9050,17 @@ script = ExtResource("1_3tixm")
 
 [node name="portal-flare1" type="Sprite2D" parent="Skeleton2D/root/portal-root/flare3/portal-flare3"]
 visible = false
-material = SubResource("CanvasItemMaterial_bjqw6")
+material = SubResource("CanvasItemMaterial_p0h2e")
 texture = ExtResource("31_kh8xv")
 
 [node name="portal-flare2" type="Sprite2D" parent="Skeleton2D/root/portal-root/flare3/portal-flare3"]
 visible = false
-material = SubResource("CanvasItemMaterial_ls2fq")
+material = SubResource("CanvasItemMaterial_1x4t3")
 texture = ExtResource("32_p2vtd")
 
 [node name="portal-flare3" type="Sprite2D" parent="Skeleton2D/root/portal-root/flare3/portal-flare3"]
 visible = false
-material = SubResource("CanvasItemMaterial_tgnwu")
+material = SubResource("CanvasItemMaterial_pol5j")
 texture = ExtResource("33_1k753")
 
 [node name="flare4" type="Bone2D" parent="Skeleton2D/root/portal-root"]
@@ -9110,17 +9078,17 @@ script = ExtResource("1_3tixm")
 
 [node name="portal-flare1" type="Sprite2D" parent="Skeleton2D/root/portal-root/flare4/portal-flare4"]
 visible = false
-material = SubResource("CanvasItemMaterial_6xi1c")
+material = SubResource("CanvasItemMaterial_oa7ev")
 texture = ExtResource("31_kh8xv")
 
 [node name="portal-flare2" type="Sprite2D" parent="Skeleton2D/root/portal-root/flare4/portal-flare4"]
 visible = false
-material = SubResource("CanvasItemMaterial_qfno1")
+material = SubResource("CanvasItemMaterial_b7ppo")
 texture = ExtResource("32_p2vtd")
 
 [node name="portal-flare3" type="Sprite2D" parent="Skeleton2D/root/portal-root/flare4/portal-flare4"]
 visible = false
-material = SubResource("CanvasItemMaterial_8hntn")
+material = SubResource("CanvasItemMaterial_jmafv")
 texture = ExtResource("33_1k753")
 
 [node name="flare5" type="Bone2D" parent="Skeleton2D/root/portal-root"]
@@ -9138,17 +9106,17 @@ script = ExtResource("1_3tixm")
 
 [node name="portal-flare1" type="Sprite2D" parent="Skeleton2D/root/portal-root/flare5/portal-flare5"]
 visible = false
-material = SubResource("CanvasItemMaterial_bcl8k")
+material = SubResource("CanvasItemMaterial_fmagy")
 texture = ExtResource("31_kh8xv")
 
 [node name="portal-flare2" type="Sprite2D" parent="Skeleton2D/root/portal-root/flare5/portal-flare5"]
 visible = false
-material = SubResource("CanvasItemMaterial_7k1w3")
+material = SubResource("CanvasItemMaterial_m8mul")
 texture = ExtResource("32_p2vtd")
 
 [node name="portal-flare3" type="Sprite2D" parent="Skeleton2D/root/portal-root/flare5/portal-flare5"]
 visible = false
-material = SubResource("CanvasItemMaterial_v20f0")
+material = SubResource("CanvasItemMaterial_luvpg")
 texture = ExtResource("33_1k753")
 
 [node name="flare6" type="Bone2D" parent="Skeleton2D/root/portal-root"]
@@ -9166,17 +9134,17 @@ script = ExtResource("1_3tixm")
 
 [node name="portal-flare1" type="Sprite2D" parent="Skeleton2D/root/portal-root/flare6/portal-flare6"]
 visible = false
-material = SubResource("CanvasItemMaterial_lteqq")
+material = SubResource("CanvasItemMaterial_bblt4")
 texture = ExtResource("31_kh8xv")
 
 [node name="portal-flare2" type="Sprite2D" parent="Skeleton2D/root/portal-root/flare6/portal-flare6"]
 visible = false
-material = SubResource("CanvasItemMaterial_3lbww")
+material = SubResource("CanvasItemMaterial_lmu6j")
 texture = ExtResource("32_p2vtd")
 
 [node name="portal-flare3" type="Sprite2D" parent="Skeleton2D/root/portal-root/flare6/portal-flare6"]
 visible = false
-material = SubResource("CanvasItemMaterial_fupmd")
+material = SubResource("CanvasItemMaterial_bgywj")
 texture = ExtResource("33_1k753")
 
 [node name="flare7" type="Bone2D" parent="Skeleton2D/root/portal-root"]
@@ -9194,17 +9162,17 @@ script = ExtResource("1_3tixm")
 
 [node name="portal-flare1" type="Sprite2D" parent="Skeleton2D/root/portal-root/flare7/portal-flare7"]
 visible = false
-material = SubResource("CanvasItemMaterial_qoe64")
+material = SubResource("CanvasItemMaterial_vn0n1")
 texture = ExtResource("31_kh8xv")
 
 [node name="portal-flare2" type="Sprite2D" parent="Skeleton2D/root/portal-root/flare7/portal-flare7"]
 visible = false
-material = SubResource("CanvasItemMaterial_2ihnr")
+material = SubResource("CanvasItemMaterial_xry7r")
 texture = ExtResource("32_p2vtd")
 
 [node name="portal-flare3" type="Sprite2D" parent="Skeleton2D/root/portal-root/flare7/portal-flare7"]
 visible = false
-material = SubResource("CanvasItemMaterial_fudmh")
+material = SubResource("CanvasItemMaterial_q6vbj")
 texture = ExtResource("33_1k753")
 
 [node name="flare8" type="Bone2D" parent="Skeleton2D/root/portal-root"]
@@ -9222,17 +9190,17 @@ script = ExtResource("1_3tixm")
 
 [node name="portal-flare1" type="Sprite2D" parent="Skeleton2D/root/portal-root/flare8/portal-flare8"]
 visible = false
-material = SubResource("CanvasItemMaterial_12gew")
+material = SubResource("CanvasItemMaterial_ux1ml")
 texture = ExtResource("31_kh8xv")
 
 [node name="portal-flare2" type="Sprite2D" parent="Skeleton2D/root/portal-root/flare8/portal-flare8"]
 visible = false
-material = SubResource("CanvasItemMaterial_xmxmq")
+material = SubResource("CanvasItemMaterial_mxlo6")
 texture = ExtResource("32_p2vtd")
 
 [node name="portal-flare3" type="Sprite2D" parent="Skeleton2D/root/portal-root/flare8/portal-flare8"]
 visible = false
-material = SubResource("CanvasItemMaterial_3jhgv")
+material = SubResource("CanvasItemMaterial_vhc7y")
 texture = ExtResource("33_1k753")
 
 [node name="flare9" type="Bone2D" parent="Skeleton2D/root/portal-root"]
@@ -9250,17 +9218,17 @@ script = ExtResource("1_3tixm")
 
 [node name="portal-flare1" type="Sprite2D" parent="Skeleton2D/root/portal-root/flare9/portal-flare9"]
 visible = false
-material = SubResource("CanvasItemMaterial_sfn7j")
+material = SubResource("CanvasItemMaterial_3vm0g")
 texture = ExtResource("31_kh8xv")
 
 [node name="portal-flare2" type="Sprite2D" parent="Skeleton2D/root/portal-root/flare9/portal-flare9"]
 visible = false
-material = SubResource("CanvasItemMaterial_fax00")
+material = SubResource("CanvasItemMaterial_rl7qy")
 texture = ExtResource("32_p2vtd")
 
 [node name="portal-flare3" type="Sprite2D" parent="Skeleton2D/root/portal-root/flare9/portal-flare9"]
 visible = false
-material = SubResource("CanvasItemMaterial_00eo8")
+material = SubResource("CanvasItemMaterial_d8qu1")
 texture = ExtResource("33_1k753")
 
 [node name="portal" type="Bone2D" parent="Skeleton2D/root/portal-root"]
@@ -9307,7 +9275,7 @@ script = ExtResource("1_3tixm")
 
 [node name="portal-streaks1" type="Sprite2D" parent="Skeleton2D/root/portal-root/portal-streaks1/portal-streaks1"]
 visible = false
-material = SubResource("CanvasItemMaterial_544pa")
+material = SubResource("CanvasItemMaterial_031p8")
 scale = Vector2(0.9774, 0.9774)
 texture = ExtResource("36_rer8r")
 
@@ -9324,7 +9292,7 @@ script = ExtResource("1_3tixm")
 
 [node name="portal-streaks2" type="Sprite2D" parent="Skeleton2D/root/portal-root/portal-streaks2/portal-streaks2"]
 visible = false
-material = SubResource("CanvasItemMaterial_2rkui")
+material = SubResource("CanvasItemMaterial_po7ad")
 position = Vector2(-1.64, -2.79)
 texture = ExtResource("37_v5egd")
 
@@ -9348,7 +9316,6 @@ z_as_relative = false
 position = Vector2(-41.2009, -29.4017)
 rotation = 0.805818
 script = ExtResource("1_3tixm")
-"切换名" = "front-foot"
 
 [node name="front-foot" type="Polygon2D" parent="front-foot"]
 texture = ExtResource("38_872q8")
@@ -9364,7 +9331,6 @@ z_as_relative = false
 position = Vector2(-25.0746, -402.204)
 rotation = -1.72194
 script = ExtResource("1_3tixm")
-"切换名" = "head"
 
 [node name="head" type="Polygon2D" parent="head"]
 texture = ExtResource("39_bcrkw")
@@ -9381,7 +9347,6 @@ z_as_relative = false
 position = Vector2(-2.85231, -252.159)
 rotation = -1.81689
 script = ExtResource("1_3tixm")
-"切换名" = "torso"
 
 [node name="torso" type="Polygon2D" parent="torso"]
 texture = ExtResource("40_3ah38")
@@ -9398,7 +9363,6 @@ z_as_relative = false
 position = Vector2(27.5077, -37.9181)
 rotation = 0.808262
 script = ExtResource("1_3tixm")
-"切换名" = "rear-foot"
 
 [node name="rear-foot" type="Polygon2D" parent="rear-foot"]
 texture = ExtResource("41_k1lmp")
@@ -9410,6 +9374,6 @@ bones = ["root/hip/rear-thigh/rear-shin/rear-foot", PackedFloat32Array(0.90802, 
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_0bmjp"),
-"animations": SubResource("AnimationLibrary_vcofs")
+"": SubResource("AnimationLibrary_ek322"),
+"animations": SubResource("AnimationLibrary_q6y6u")
 }

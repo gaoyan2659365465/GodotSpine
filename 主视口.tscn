@@ -1,11 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://bunx10w7fj5hs"]
+[gd_scene load_steps=6 format=3 uid="uid://bunx10w7fj5hs"]
 
 [ext_resource type="Script" path="res://主视口.gd" id="1_20ml3"]
 [ext_resource type="Script" path="res://层级树控件/层级树.gd" id="3_46ykk"]
 [ext_resource type="Script" path="res://绘制控件.gd" id="3_l4pvb"]
 [ext_resource type="Script" path="res://层级树面板.gd" id="3_lb4v7"]
 [ext_resource type="PackedScene" uid="uid://d4neojyfx83nc" path="res://spine转换/spineboy-pro.tscn" id="6_thfqp"]
-[ext_resource type="Texture2D" uid="uid://d11e8o4po805" path="res://屏幕截图 2025-01-05 091540.png" id="7_6le7h"]
 
 [node name="主视口" type="Node2D"]
 script = ExtResource("1_20ml3")
@@ -53,11 +52,5 @@ layout_mode = 2
 size_flags_vertical = 3
 script = ExtResource("3_46ykk")
 
-[node name="屏幕截图2025-01-05091540" type="Sprite2D" parent="."]
-visible = false
-modulate = Color(1, 1, 1, 0.258824)
-position = Vector2(634, 475)
-texture = ExtResource("7_6le7h")
-
 [node name="Node2D" parent="." instance=ExtResource("6_thfqp")]
-position = Vector2(432, 651)
+position = Vector2(6, 313)

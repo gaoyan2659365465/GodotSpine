@@ -44,14 +44,3 @@ func _input(event: InputEvent) -> void:
 	if Global.选择管理器.选中列表.size() >= 1:
 		if Global.选择管理器.选中列表[0] == self:
 			颜色 = Color(0, 1, 1)
-
-"""
-func _draw() -> void:
-	var tran:Transform2D
-	tran = tran.rotated(get_bone_angle()).affine_inverse()
-	var local_mouse_pos = tran * get_local_mouse_position()
-	draw_circle(local_mouse_pos,3,Color(1, 0, 0),false,1,true)
-	
-	var rect = get_rect()
-	draw_rect(rect,Color(0, 1, 0),false)
-"""
